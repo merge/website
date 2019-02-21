@@ -1,82 +1,141 @@
-title = "Martin Kepplinger"
+# Site settings
+baseurl = "https://martinkepplinger.com" #without ending slash
 languageCode = "en-us"
+title = "Martin Kepplinger"
 theme = "hugo-identity-theme"
-baseurl = "https://martinkepplinger.com/"
+themesDir = "themes"
+
+# Disable unnecessary kinds
+disableKinds = ["page", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap", "robotsTXT", "404"]
 
 # Enter your tracking code to enable Google Analytics
 #googleAnalytics = "UA-XXXXX-Y"
 
 [params]
-	
-	# Images settings
-	# Icons, backgrounds and avatars folders are placed in theme's static/images folder.
-	# You may place your images in corresponding folders and then set only filenames below to
-	# change page's appearance
-	
-	favicon = "favicon.ico"
-	appletouchicon = "apple-touch-icon-precomposed.png"
-	background = "bg3.jpg"
-	avatar = "me1.jpg"
 
-  # Custom styling
-  # To customize the styling of this theme, uncomment and edit the following line to point 
-  # to your site's css in the assets/ directory. 
+  # Images settings
+  # Icons, backgrounds and avatars folders are placed in theme's static/images folder.
+  # You may place your images in corresponding folders and then set only filenames below to
+  # change page's appearance
 
-  # custom_css = ["css/foo.bar"]
-	
-	# Personal settings
-	
+  # Site icons
+  favicon_ico = "favicon.ico"
+  favicon_ico_sizes = "16x16 32x32"
+  appleicon = "apple.png"
+
+  # Additional options to supplement icons served
+  #favicon_png = "favicon.png"
+  #favicon_png_sizes = "96x96"
+  #favicon_svg = "favicon.svg"
+
+  # Link custom assets relative to /static
+  #custom_js  = [""]
+  #custom_css = ["background.css", "icons.css"]
+
+  # Customization switches
+  # Overwrite FontAwesome: see icons.css
+  #custom_icons = true
+  # Overwrite background: see background.css
+  #custom_background = true
+
+  # Personal data
+  [params.personal]
+    # If name is not set, author is used
     name = "Martin Kepplinger"
-	position = "Software Developer"
-	
-	# Extra stuff
-	# NOTE: There is little different extra stuff in original Identity theme by HTML5 UP.
-	# You can play with it downlading original theme right here:
-	# html5up.net/identity/download
-	#
-	# Since this template is static, the contact form uses www.formspree.io as a
-	# proxy. The form makes a POST request to their servers to send the actual
-	# email. Visitors can send up to a 1000 emails each month for free.
+    # Avatars can be written to images/avatars/
+    avatar = "me1.jpg"
+    position = "Software Developer"
+    scope = [
+        "[Kernel development](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/log/?qt=author&q=Martin+Kepplinger) for fun",
+        "Maintainer for [tslib](http://tslib.org)",
+        "Maintainer for the Skulls [coreboot](https://www.coreboot.org/users.html) distribution"
+      ]
+
+  # Contact form settings
+
+  [params.contact]
+    # Since this template is static, the contact form uses www.formspree.io as a
+    # proxy. The form makes a POST request to their servers to send the actual
+    # email. Visitors can send up to a 1000 emails each month for free.
     #
     # What you need to do for the setup?
     #
     # - set your email address under 'email' below
-	# - enable form by setting 'enable' to 'true'
     # - upload the generated site to your server
     # - send a dummy email yourself to confirm your account
     # - click the confirm link in the email from www.formspree.io
     # - you're done. Happy mailing!
-	
-	email = "your@email.com"
-	
-	# Contact form settings
-		
-	[params.contact]
-		enable = false
-		formTitle = "Touch Me!"
-		namePlaceholder = "Name"
-		emailPlaceholder = "Email"
-		messagePlaceholder = "Message"
-		buttonText = "Send it"
-		
-	# Social settings
-	# You may change these with your social links or add others
 
-	[[params.social]]
-		title = "Github"
-		icon = "fa-github"
-		link = "https://github.com/merge"
-	
-	[[params.social]]
-		title = "Linux"
-		icon = "fa-linux"
-		link = "https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/log/?qt=author&q=Martin+Kepplinger"
+    email = "your@email.com"
 
-	[[params.social]]
-		title = "Linkedin"
-		icon = "fa-linkedin"
-		link = "https://www.linkedin.com/in/martin-kepplinger"
+    # It is possible to substitute formspring with other providers
+    # as an example the mailout plugin from caddy.
+    # Provide the post URL for the form and depending on the provider
+    # add some custom JS script to finish the implementation.
 
-	# Footer settings
-	[params.footer]
-copyright = "2019"
+    #postURL = "https://example.com/mailout/"
+
+    enable = false
+    title = "Touch Me!"
+    namePlaceholder = "Name"
+    emailPlaceholder = "Email"
+    messagePlaceholder = "Message"
+    buttonText = "Send it"
+    success = "Thank you for contacting us."
+    error = "Message could not be send. Please contact us at "
+
+    # Google invisible captcha
+    #[params.contact.captcha]
+    #  sitekey = ""
+
+
+    # Add optional form fields to identify contact forms.
+    #[[params.contact.fields.hidden]]
+    #  name = "someID"
+    #  value = "example.com"
+
+    #[[params.contact.fields.hidden]]
+    # Special values for name such as "page" and "site" will be autofilled
+    #  name = "page"
+
+  # Social settings
+  # You may change these with your social links or add others
+
+  [[params.social]]
+    title = "Github"
+    icon = "fa-git"
+    link = "https://github.com/merge"
+    target = "_blank"
+
+  [[params.social]]
+    title = "Linux"
+    icon = "fa-linux"
+    link = "#"
+    target = "_blank"
+
+  # Footer settings
+  [params.footer]
+    # If copyright is not set, author is used
+    copyright = "Martin Kepplinger"
+
+  # Page license
+  [params.license]
+    link = "https://creativecommons.org/licenses/by-sa/4.0/legalcode"
+    name = "CC-BY-SA-4.0"
+
+  # Credits
+  [[params.credits]]
+    # Title is used as URL text
+    title = ""
+    # Text will be used to explain the credit
+    text = "Secure Link: "
+    link = ""
+
+  # Optional piwik tracking
+  #[params.analytics.piwik]
+  #  URL = "https://stats.example.com"
+  #  ID = "42"
+  #  # Track all subdomains with "*.example.com"
+  #  domain = "www.example.com"
+  #  # Optional integrity check hash
+  #  hash = "sha512-RfeD0pacGTqy9m7U6PgehQfS4cc7SIt+e+P+H5e848kEvB/RW84CUGO3O4O3LNbxjevym6KPUZ8muPsMrI8WIw=="
