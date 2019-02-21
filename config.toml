@@ -77,10 +77,6 @@ baseurl = "https://martinkepplinger.com/"
 		icon = "fa-linkedin"
 		link = "https://www.linkedin.com/in/martin-kepplinger"
 
-	[[params.social]]
-		title = "Tor Relay"
-		icon = "fa-server"
-		link = "https://atlas.torproject.org/#details/3C79AAC6770A4BFEA0E9BBE3A339046C01FF559C"
 	# Footer settings
 	[params.footer]
-copyright = "2016"
+copyright = "2019"
