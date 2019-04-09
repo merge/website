@@ -46,7 +46,7 @@ disableKinds = ["page", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap",
     avatar = "me1.jpg"
     position = "Software Developer"
     scope = [
-        "[Kernel development](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/log/?qt=author&q=Martin+Kepplinger) for fun",
+        "[Kernel development](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/log/?qt=author&q=Martin+Kepplinger)",
         "Maintainer for [tslib](http://tslib.org)",
         "Maintainer for the Skulls [coreboot](https://www.coreboot.org/users.html) distribution"
       ]
