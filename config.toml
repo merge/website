@@ -1,5 +1,5 @@
 # Site settings
-baseurl = "https://martinkepplinger.com" #without ending slash
+baseurl = "//martinkepplinger.com" #without ending slash
 languageCode = "en-us"
 title = "Martin Kepplinger"
 theme = "hugo-identity-theme"
