@@ -128,8 +128,8 @@ disableKinds = ["page", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap",
     # Title is used as URL text
     title = ""
     # Text will be used to explain the credit
-    text = "Secure Link: "
-    link = ""
+    text = "Secure Link: qko2jntsjdju3cq4xgrhr3cggg5yjsln72kjvbeez2t4ldgctimurlyd.onion"
+    link = "http://qko2jntsjdju3cq4xgrhr3cggg5yjsln72kjvbeez2t4ldgctimurlyd.onion/"
 
   # Optional piwik tracking
   #[params.analytics.piwik]
